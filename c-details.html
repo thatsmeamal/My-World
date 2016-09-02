@@ -1,0 +1,58 @@
+<div style="margin:10 auto;">
+
+	<div ng-show="showButtons" style="margin-left:430px";>
+		<div class="btn-group btn-group-lg">
+		  <button type="button" class="btn btn-primary" ng-click="cntrl.getCuisines()">Cuisines</button>
+		  <button type="button" class="btn btn-primary" ng-click="cntrl.getHotSpots()">Hot Spots</button>
+		  <button type="button" class="btn btn-primary" ng-click="cntrl.getPlaces()">Public Buildings</button>
+		  <button type="button" class="btn btn-primary" ng-click="cntrl.getPitStops()">Public Transport</button>
+		</div>
+	</div>
+	<br><br>
+
+	<div ng-show="showCuisines" style="background-color:white;width:800px;margin:0 auto;">
+		<h2>Cuisines</h2>
+		<ul>
+			<li style="margin: 0 10px;float:left" ng-repeat="x in cuisineItems">{{x}}</li>
+		</ul>
+	</div>
+
+
+	<div ng-show="showHotSpots" style="background-color:white;width:800px;margin:0 auto;">
+		<h2>Hot Spots</h2>
+		<ul>
+			<li ng-repeat="x in hotSpots">{{x}}</li>
+		</ul>
+	</div>
+
+
+	<div ng-show="showPlaces" style="background-color:white;width:800px;margin:0 auto;">
+		<h2>Public Buildings</h2>
+		<ul ng-hide="alertpBuildings">
+			<li ng-repeat="x in pbuildings">{{x}}</li>
+		</ul>
+
+		<div ng-show="alertpBuildings">
+			{{"NOTHING TO SHOW"}}
+		</div>
+	</div>
+	
+
+	<div ng-show="showTransport" style="background-color:white;width:800px;margin:0 auto;">
+		<h2>Public Transports</h2>
+		<table class="table" ng-hide="alertPitStops">
+			<th>Place</th>
+			<th>Distance from here (In kms)</th>
+			<tr ng-repeat="x in pitStops">
+				<td >{{x.title}}</td>
+				<td >{{x.distance}}</td>
+			</tr>
+		</table>
+
+		<div ng-show="alertPitStops">
+			{{"NOTHING TO SHOW"}}
+		</div>
+
+	</div>
+
+</div>

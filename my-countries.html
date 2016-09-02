@@ -1,0 +1,57 @@
+<img src="Pics/logo.png" width=90px height=90px alt="NOOOOOOOOOOOOOO"/> 
+
+<div style="margin:0 auto;width:250px">
+    {{"COUNTRY NAME"}}
+    <select class="form-control" style="text-align-last:center;;width:400px" id="sel1" ng-model="contry" ng-options="x for x in clist">
+    </select>
+
+    <br><br><br>
+	
+	<input style="margin-left:150px" type="submit" class="btn btn-info" value="Submit" class="button" ng-click="cntrl.getDetails();"/>
+
+	<br><br><br>
+</div>
+
+	<div>
+	    <c-details></c-details>
+	</div>
+
+<div class="container" ng-show="showDetails" style="font-weight:bold;">
+
+	<div class="container" style="width:800px;margin-left:210px">
+		<div class="panel panel-default">
+	  		<div class="panel-body">{{"Capital: "}}{{capital}}</div>
+	  	</div>
+	</div>
+
+	<div class="container" style="width:800px;margin-left:210px">
+		<div class="panel panel-default">
+	  		<div class="panel-body">{{"Region: "}}{{region}}</div>
+	  	</div>
+	</div>
+
+	<div class="container" style="width:800px;margin-left:210px">
+		<div class="panel panel-default">
+	  		<div class="panel-body">{{"Sub Region: "}}{{subregion}}</div>
+	  	</div>
+	</div>
+
+
+	<div class="container" style="width:800px;margin-left:210px">
+		<div class="panel panel-default">
+	  		<div class="panel-body">{{"Population: "}}{{population}}</div>
+	  	</div>
+	</div>
+
+	<div class="container" style="width:800px;margin-left:210px">
+		<div class="panel panel-default">
+	  		<div class="panel-body">{{"Timezones: "}}{{timezones}}</div>
+	  	</div>
+	</div>
+
+	<div class="container" style="width:800px;margin-left:210px">
+		<div class="panel panel-default">
+	  		<div class="panel-body">{{"Borders: "}}{{borders}}</div>
+	  	</div>
+	</div>
+</div>
